@@ -1,0 +1,12 @@
+C:\Users\alvar\OneDrive\Desktop\PROG3000\Assignment3\Assignment3\Assignment3.Core\bin\Debug\net9.0\Assignment3.Core.deps.json
+C:\Users\alvar\OneDrive\Desktop\PROG3000\Assignment3\Assignment3\Assignment3.Core\bin\Debug\net9.0\Assignment3.Core.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\Assignment3\Assignment3\Assignment3.Core\bin\Debug\net9.0\Assignment3.Core.pdb
+C:\Users\alvar\OneDrive\Desktop\PROG3000\Assignment3\Assignment3\Assignment3.Core\obj\Debug\net9.0\Assignment3.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alvar\OneDrive\Desktop\PROG3000\Assignment3\Assignment3\Assignment3.Core\obj\Debug\net9.0\Assignment3.Core.AssemblyInfoInputs.cache
+C:\Users\alvar\OneDrive\Desktop\PROG3000\Assignment3\Assignment3\Assignment3.Core\obj\Debug\net9.0\Assignment3.Core.AssemblyInfo.cs
+C:\Users\alvar\OneDrive\Desktop\PROG3000\Assignment3\Assignment3\Assignment3.Core\obj\Debug\net9.0\Assignment3.Core.csproj.CoreCompileInputs.cache
+C:\Users\alvar\OneDrive\Desktop\PROG3000\Assignment3\Assignment3\Assignment3.Core\obj\Debug\net9.0\Assignment3.Core.sourcelink.json
+C:\Users\alvar\OneDrive\Desktop\PROG3000\Assignment3\Assignment3\Assignment3.Core\obj\Debug\net9.0\Assignment3.Core.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\Assignment3\Assignment3\Assignment3.Core\obj\Debug\net9.0\refint\Assignment3.Core.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\Assignment3\Assignment3\Assignment3.Core\obj\Debug\net9.0\Assignment3.Core.pdb
+C:\Users\alvar\OneDrive\Desktop\PROG3000\Assignment3\Assignment3\Assignment3.Core\obj\Debug\net9.0\ref\Assignment3.Core.dll
