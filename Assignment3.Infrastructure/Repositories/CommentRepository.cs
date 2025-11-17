@@ -22,17 +22,20 @@ public class CommentRepository : ICommentRepository
     {
         return await _context.Comments
                              .Where(c => c.PostId == postId)
+                             .Include(c => c.Post)
                              .ToListAsync();
     }
 
     public async Task<Comment?> GetCommentByIdAsync(int id)
     {
         return await _context.Comments
+                            .Include(c => c.Post)
                              .FirstOrDefaultAsync(c => c.Id == id);
     }
 
     public async Task<Comment> CreateCommentAsync(Comment comment)
     {
+        
         _context.Comments.Add(comment);
         await _context.SaveChangesAsync();
         return comment;

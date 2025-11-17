@@ -14,8 +14,8 @@ namespace Assignment3.Core.Dtos;
         [Required]
         public string? Content { get; set; }
 
-        public string? Description { get; set; }
+      
 
-        [Required]
-        public int PostId { get; set; }
+
+
     }

@@ -13,5 +13,5 @@ namespace Assignment3.Core.Dtos;
         [Required]
         public string? Content { get; set; }
 
-        public DateTime? UpdatedAt { get; set; }
+        
     }

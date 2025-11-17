@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
+
 namespace Assignment3.Core.Models
 {
     public class Post
@@ -20,7 +21,6 @@ namespace Assignment3.Core.Models
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         public DateTime? UpdatedAt { get; set; }
-
         public ICollection<Comment> Comments { get; set; } = new List<Comment>();
     }
 }

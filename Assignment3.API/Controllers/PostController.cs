@@ -46,7 +46,9 @@ public class PostController : ControllerBase
         var post = new Post
         {
             Title = postDto.Title,
-            Content = postDto.Content
+            Content = postDto.Content,
+            CreatedAt = DateTime.UtcNow,
+            UpdatedAt = DateTime.UtcNow
         };
 
         var createdPost = await _postRepository.CreatePostAsync(post);

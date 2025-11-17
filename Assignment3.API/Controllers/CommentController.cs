@@ -13,10 +13,12 @@ namespace Assignment3.API.Controllers;
 public class CommentController : ControllerBase
 {
     private readonly ICommentRepository _commentRepository;
+    private readonly IPostRepository _postRepository;
 
-    public CommentController(ICommentRepository commentRepository)
+    public CommentController(ICommentRepository commentRepository, IPostRepository postRepository)
     {
         _commentRepository = commentRepository;
+        _postRepository = postRepository;
     }
 
     [HttpGet]
@@ -45,17 +47,36 @@ public class CommentController : ControllerBase
     }
 
     [HttpPost("posts/{postId}/comments")]
-    public async Task<IActionResult> CreateComment([FromBody] CommentCreateDTO commentDto)
+    public async Task<IActionResult> CreateComment(int postId, [FromBody] CommentCreateDTO commentDto)
     {
+        var post = await _postRepository.GetPostByIdAsync(postId);
+        if (post == null)
+            return NotFound($"Post with ID {postId} not found.");
+
         var comment = new Comment
         {
-            Content = commentDto.Content,
-            PostId = commentDto.PostId
+            Name = commentDto.Name,
+            Email = commentDto.Email,
+            Content = commentDto.Content,  
+            PostId = postId,
+            CreatedAt = DateTime.UtcNow
         };
+         post.Comments.Add(comment);
+         await _postRepository.UpdatePostAsync(post);
+        var responseDto = new CommentDto
+    {
+        Id = comment.Id,
+        Name = comment.Name,
+        Email = comment.Email,
+        Content = comment.Content,
+        CreatedAt = comment.CreatedAt,
+        PostId = comment.PostId,
+        PostTitle = post.Title
+    };
 
-        var createdComment = await _commentRepository.CreateCommentAsync(comment);
-        return CreatedAtAction(nameof(GetCommentById), new { id = createdComment.Id }, createdComment);
-    }
+    return CreatedAtAction(nameof(GetCommentById), new { id = responseDto.Id }, responseDto);
+}
+
 
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateComment(int id, [FromBody] CommentUpdateDto commentDto)

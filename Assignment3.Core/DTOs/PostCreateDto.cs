@@ -13,7 +13,6 @@ namespace Assignment3.Core.Dtos;
         [Required]
         public string? Content { get; set; }
 
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        
 
-        public DateTime? UpdatedAt { get; set; }
     }

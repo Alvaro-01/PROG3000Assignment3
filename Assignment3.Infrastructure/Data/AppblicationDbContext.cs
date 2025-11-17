@@ -29,6 +29,8 @@ public class ApplicationDbContext : DbContext
         {
             entity.HasKey(e => e.Id);
             entity.Property(e => e.PostId).IsRequired();
+            entity.Property(e => e.Name).IsRequired();
+            entity.Property(e => e.Email).IsRequired();
             entity.Property(e => e.Content).IsRequired();
             entity.Property(e => e.CreatedAt).IsRequired();
 
