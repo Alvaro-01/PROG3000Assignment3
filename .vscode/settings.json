@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/1fe6bf8c-b5e9-4d32-9a4c-050546c488ec/resourceGroups/appsvc_windows_canadacentral/providers/Microsoft.Web/sites/Prog3000Assignment3",
+    "appService.deploySubpath": "Assignment3.API\\publish"
+}
